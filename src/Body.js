@@ -8,8 +8,8 @@ export default function(){
             <div class="esquerda">
                 <Stories />
                 <Posts />
-                <SideBar />
             </div>
+                <SideBar />
         </div>
     );
 }
