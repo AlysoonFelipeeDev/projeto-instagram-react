@@ -1,4 +1,4 @@
-export default Suggestions(){
+export default function Suggestions() {
     return (
         <div class="sugestoes">
             <div class="titulo">
