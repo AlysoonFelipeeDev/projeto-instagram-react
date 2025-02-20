@@ -1,10 +1,11 @@
+import User from "./User";
+import Suggestions from "./Suggestions";
+
 export default function SideBar(){
     return (
         <div class="sidebar">
-        
-
-        
-
+            <User />
+            <Suggestions />
             <div class="links">
                 Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
                 Hashtags • Idioma
@@ -14,5 +15,5 @@ export default function SideBar(){
                 © 2021 INSTAGRAM DO FACEBOOK
             </div>
         </div>
-    )
+    );
 }
