@@ -48,11 +48,11 @@ export default function Posts(){
                     </div>
                 </div>
 
-                <div class="conteudo">
+                <div className="conteudo">
                     <img src="assets/dog.svg" alt="dog" />
                 </div>
 
-                <div class="fundo">
+                <div className="fundo">
                     <div class="acoes">
                         <div>
                             <ion-icon name="heart-outline"></ion-icon>
@@ -64,9 +64,9 @@ export default function Posts(){
                         </div>
                     </div>
 
-                    <div class="curtidas">
+                    <div className="curtidas">
                         <img src="assets/adorable_animals.svg" alt="adorable_animals"/>
-                        <div class="texto">
+                        <div className="texto">
                             Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
                         </div>
                     </div>

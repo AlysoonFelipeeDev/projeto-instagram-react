@@ -1,79 +1,79 @@
 export default function Stories(){
     return (
-        <div class="stories">
-            <div class="story">
-                <div class="imagem">
+        <div className="stories">
+            <div className="story">
+                <div className="imagem">
                     <img src="assets/9gag.svg" alt="9gag"/>
                 </div>
-                <div class="usuario">
+                <div className="usuario">
                     9gag
                 </div>
             </div>
 
-            <div class="story">
-                <div class="imagem">
+            <div className="story">
+                <div className="imagem">
                     <img src="assets/meowed.svg" alt="meowed"/>
                 </div>
-                <div class="usuario">
+                <div className="usuario">
                     meowed
                 </div>
             </div>
 
-            <div class="story">
-                <div class="imagem">
+            <div className="story">
+                <div className="imagem">
                     <img src="assets/barked.svg" alt="barked"/>
                 </div>
-                <div class="usuario">
+                <div className="usuario">
                     barked
                 </div>
             </div>
 
-            <div class="story">
-                <div class="imagem">
+            <div className="story">
+                <div className="imagem">
                     <img src="assets/nathanwpylestrangeplanet.svg" alt="nathanwpylestrangeplanet"/>
                 </div>
-                <div class="usuario">
+                <div className="usuario">
                     nathanwpylestrangeplanet
                 </div>
             </div>
 
-            <div class="story">
-                <div class="imagem">
+            <div className="story">
+                <div className="imagem">
                     <img src="assets/wawawicomics.svg" alt="wawawicomics"/>
                 </div>
-                <div class="usuario">
+                <div className="usuario">
                     wawawicomics
                 </div>
             </div>
 
-            <div class="story">
-                <div class="imagem">
+            <div className="story">
+                <div className="imagem">
                     <img src="assets/respondeai.svg" alt="respondeai"/>
                 </div>
-                <div class="usuario">
+                <div className="usuario">
                     respondeai
                 </div>
             </div>
 
-            <div class="story">
-                <div class="imagem">
+            <div className="story">
+                <div className="imagem">
                     <img src="assets/filomoderna.svg" alt="filomoderna"/>
                 </div>
-                <div class="usuario">
+                <div className="usuario">
                     filomoderna
                 </div>
             </div>
 
-            <div class="story">
-                <div class="imagem">
+            <div className="story">
+                <div className="imagem">
                     <img src="assets/memeriagourmet.svg" alt="memeriagourmet"/>
                 </div>
-                <div class="usuario">
+                <div className="usuario">
                     memeriagourmet
                 </div>
             </div>
 
-            <div class="setinha">
+            <div className="setinha">
             <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>
         </div>

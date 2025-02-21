@@ -1,8 +1,8 @@
 export default function User(){
     return (
-        <div class="usuario">
+        <div className="usuario">
             <img src="assets/catanacomics.svg" alt="imagem de perfil"/>
-            <div class="texto">
+            <div className="texto">
                 <span>
                 <strong>catanacomics</strong>
                 <ion-icon name="pencil"></ion-icon>
