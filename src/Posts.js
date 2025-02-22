@@ -7,7 +7,7 @@ export default function Posts(){
     ]
     
     return (
-        <div class="posts">
+        <div className="posts">
             {post.map((pst,index)=> <PostItem imagem={pst.imagem} alt={pst.alt} key={index}/>)}
         </div>
     );
@@ -20,21 +20,21 @@ function PostItem(props){
 
     return (
         <>
-            <div class="post">
-                <div class="topo">
-                    <div class="usuario">
+            <div className="post">
+                <div className="topo">
+                    <div className="usuario">
                         <img src={img2} alt={alt2}/>
                         {alt2}
                     </div>
-                    <div class="acoes">
+                    <div className="acoes">
                         <ion-icon name="ellipsis-horizontal"></ion-icon>
                     </div>
                 </div>
-                <div class="conteudo">
+                <div className="conteudo">
                     <img src={img1} alt={alt1}/> 
                 </div>
-                <div class="fundo">
-                    <div class="acoes">
+                <div className="fundo">
+                    <div className="acoes">
                         <div>
                             <ion-icon name="heart-outline"></ion-icon>
                             <ion-icon name="chatbubble-outline"></ion-icon>
@@ -44,9 +44,9 @@ function PostItem(props){
                             <ion-icon name="bookmark-outline"></ion-icon>
                         </div>
                     </div>
-                    <div class="curtidas">
+                    <div className="curtidas">
                         <img src={img3} alt={alt3}/>
-                        <div class="texto">
+                        <div className="texto">
                             Curtido por <strong>{alt3}</strong> e <strong>outras {like} pessoas</strong>
                         </div>
                     </div>
