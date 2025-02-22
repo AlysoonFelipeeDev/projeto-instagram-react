@@ -1,21 +1,38 @@
 export default function Posts(){
+    const post = [
+        {imagem: ["assets/gato-telefone.svg", "assets/meowed.svg", "assets/respondeai.svg", 101.523], alt:["gato-telefone", "meowed", "respondeai"]},
+        {imagem: ["assets/dog.svg", "assets/barked.svg", "assets/adorable_animals.svg", 99.105], alt:["dog", "baked", "adorable_animals"]},
+        {imagem: ["assets/gato-telefone.svg", "assets/meowed.svg", "assets/filomoderna.svg", 145.230], alt:["gato-telefone", "meowed", "filomoderna"]}
+        
+    ]
+    
     return (
         <div class="posts">
+            {post.map((pst,index)=> <PostItem imagem={pst.imagem} alt={pst.alt} key={index}/>)}
+        </div>
+    );
+}
+
+function PostItem(props){
+    const {imagem,alt} = props
+    const [img1, img2, img3, like] = imagem;
+    const [alt1, alt2, alt3] = alt;
+
+    return (
+        <>
             <div class="post">
                 <div class="topo">
                     <div class="usuario">
-                        <img src="assets/meowed.svg" alt="meowed"/>
-                        meowed
+                        <img src={img2} alt={alt2}/>
+                        {alt2}
                     </div>
                     <div class="acoes">
                         <ion-icon name="ellipsis-horizontal"></ion-icon>
                     </div>
                 </div>
-
                 <div class="conteudo">
-                    <img src="assets/gato-telefone.svg" alt="gato-telefone"/>
+                    <img src={img1} alt={alt1}/> 
                 </div>
-
                 <div class="fundo">
                     <div class="acoes">
                         <div>
@@ -27,51 +44,14 @@ export default function Posts(){
                             <ion-icon name="bookmark-outline"></ion-icon>
                         </div>
                     </div>
-
                     <div class="curtidas">
-                        <img src="assets/respondeai.svg" alt="respondeai"/>
+                        <img src={img3} alt={alt3}/>
                         <div class="texto">
-                            Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
+                            Curtido por <strong>{alt3}</strong> e <strong>outras {like} pessoas</strong>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="post">
-                <div class="topo">
-                    <div class="usuario">
-                        <img src="assets/barked.svg" alt="barked"/>
-                        barked
-                    </div>
-                    <div class="acoes">
-                        <ion-icon name="ellipsis-horizontal"></ion-icon>
-                    </div>
-                </div>
-
-                <div className="conteudo">
-                    <img src="assets/dog.svg" alt="dog" />
-                </div>
-
-                <div className="fundo">
-                    <div class="acoes">
-                        <div>
-                            <ion-icon name="heart-outline"></ion-icon>
-                            <ion-icon name="chatbubble-outline"></ion-icon>
-                            <ion-icon name="paper-plane-outline"></ion-icon>
-                        </div>
-                        <div>
-                            <ion-icon name="bookmark-outline"></ion-icon>
-                        </div>
-                    </div>
-
-                    <div className="curtidas">
-                        <img src="assets/adorable_animals.svg" alt="adorable_animals"/>
-                        <div className="texto">
-                            Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+        </>
+    )
 }
