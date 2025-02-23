@@ -5,17 +5,17 @@ export default function User(){
     const [imgUsuario, setImgUsuario] = React.useState("assets/catanacomics.svg");
 
     function alterarUsuario(){
-        const perguntaNome = prompt("Qual seu nome?");
+        const perguntaNome = prompt("Qual seu nome?") || usuario;
 
-        if(!usuario){
-            setUsuario(usuario);
-        } else if(usuario) {
+        if(usuario){
             setUsuario(perguntaNome);
+        } else  {
+            setUsuario(usuario);
         }
     }
 
     function alterarImagem(){
-        const perguntaImagem = prompt("Adicione aqui o link de sua imagem");
+        const perguntaImagem = prompt("Adicione aqui o link de sua imagem") || imgUsuario;
 
     if(!imgUsuario){
             setImgUsuario(imgUsuario)
