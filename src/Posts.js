@@ -21,6 +21,8 @@ function PostItem(props){
     const [alt1, alt2, alt3] = alt;
 
     const [maisSeguidor, setMaiseguidor] = React.useState(like)
+    const [curtido, setCurtido] = React.useState(false)
+
     function salvarPost(event){
         const salvar = event.target;
         salvar.classList.toggle("preenchido");
@@ -29,13 +31,23 @@ function PostItem(props){
     function darLike(event){
         const likes = event.target;
         likes.classList.toggle("preenchidoVermelho")
+    
 
         if(likes.classList.contains("preenchidoVermelho")){
             setMaiseguidor(maisSeguidor +1);
-        } else {
+        }else {
             setMaiseguidor(maisSeguidor -1);
         }
     }
+
+    function darLikePost(){
+        if(curtido){
+            return
+        };
+        setCurtido(true)
+        setMaiseguidor(maisSeguidor + 1)
+    }
+
 
     return (
         <>
@@ -50,12 +62,12 @@ function PostItem(props){
                     </div>
                 </div>
                 <div className="conteudo">
-                    <img src={img1} alt={alt1}/> 
+                    <img onClick={darLikePost} src={img1} alt={alt1}/> 
                 </div>
                 <div className="fundo">
                     <div className="acoes">
                         <div>
-                            <ion-icon onClick={darLike} name="heart-outline"></ion-icon>
+                            <ion-icon  onClick={darLike} className="coracao" name="heart-outline"></ion-icon>
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
                         </div>
