@@ -20,36 +20,27 @@ function PostItem(props){
     const [img1, img2, img3, like] = imagem;
     const [alt1, alt2, alt3] = alt;
 
-    const [maisSeguidor, setMaiseguidor] = React.useState(like)
-    const [curtido, setCurtido] = React.useState(false)
+    const [maisSeguidor, setMaiseguidor] = React.useState(like);
+    const [curtido, setCurtido] = React.useState(false);
+    const [salvo, setSalvo] = React.useState(false);
 
-    function salvarPost(event){
-        const salvar = event.target;
-        salvar.classList.toggle("preenchido");
+    function salvarPost(){
+        setSalvo(!salvo)
     }
 
-    function darLike(event){
-        const likes = event.target;
-        likes.classList.toggle("preenchidoVermelho")
-    
-
-        if(likes.classList.contains("preenchidoVermelho")){
-            setMaiseguidor(maisSeguidor +1);
-        }else {
-            setMaiseguidor(maisSeguidor -1);
-        }
+    function darLike(){
+        setCurtido(!curtido);
+        setMaiseguidor(curtido ? maisSeguidor - 1 : maisSeguidor + 1);
     }
 
     function darLikePost(){
-        if(curtido){
-            return
+        if(!curtido){
+            setCurtido(true)
+            setMaiseguidor(maisSeguidor + 1)
         };
-        setCurtido(true)
-        setMaiseguidor(maisSeguidor + 1)
     }
 
-
-    return (
+return (
         <>
             <div className="post">
                 <div className="topo">
@@ -67,12 +58,15 @@ function PostItem(props){
                 <div className="fundo">
                     <div className="acoes">
                         <div>
-                            <ion-icon  onClick={darLike} className="coracao" name="heart-outline"></ion-icon>
+                            <ion-icon onClick={darLike} 
+                            name={curtido ? "heart" : "heart-outline"}
+                            style={{ color: curtido ? 'red' : 'black' }}
+                        ></ion-icon>
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
                         </div>
                         <div>
-                            <ion-icon onClick={salvarPost}   name="bookmark-outline" ></ion-icon>
+                            <ion-icon onClick={salvarPost}   name={!salvo ? "bookmark-outline" : "bookmark"}  ></ion-icon>
                         </div>
                     </div>
                     <div className="curtidas">
